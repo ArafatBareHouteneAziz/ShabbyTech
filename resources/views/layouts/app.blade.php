@@ -9,7 +9,7 @@
 <body class="bg-gray-50 text-gray-900">
     <nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
         <div class="container mx-auto flex items-center justify-between py-4 px-6">
-            <a href="/" class="text-2xl font-bold text-indigo-600">YourName</a>
+            <a href="/" class="text-2xl font-bold text-indigo-600">{{ config('app.name', 'ShabbyTech') }}</a>
             <ul class="flex space-x-6">
                 <li><a href="{{ route('home') }}" class="hover:text-indigo-600">Home</a></li>
                 <li><a href="{{ route('services') }}" class="hover:text-indigo-600">Services</a></li>

@@ -46,7 +46,7 @@
                 </div>
                 <!-- linked to Digit'All Website on same ip but different port -->
                 <a href="http://{{ env('DIGITAL_ALL_URL') }}" target="_blank" class="text-white/80 hover:text-white transition">
-                    Digit'All http://{{ env('DIGITAL_ALL_URL') }}
+                    Digit'All
                 </a>
             </div>
             <button class="md:hidden text-white hover:text-white/80">

@@ -12,20 +12,21 @@
 <body class="bg-gray-50 text-gray-900 font-sans">
     <nav class="fixed top-0 left-0 w-full bg-primary backdrop-blur-md shadow-sm z-50">
         <div class="container mx-auto flex items-center justify-between py-4 px-6">
-            <!-- le Nom ShabbyTech barre -->
-             
-            <a href="/" class="text-2xl font-bold text-white">
+            <!-- Logo -->
+            <a href="/" class="text-xl md:text-2xl font-bold text-white">
                 <span class="text-white/50 line-through">ShabbyTech</span>
                 <span class="text-white">Digit'All</span>
             </a>
-            <div class="hidden md:flex items-center space-x-8">
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center space-x-8">
                 <a href="{{ route('home') }}" class="text-white/80 hover:text-white transition">{{ __('messages.home') }}</a>
                 <a href="{{ route('services') }}" class="text-white/80 hover:text-white transition">{{ __('messages.services') }}</a>
                 <a href="{{ route('about') }}" class="text-white/80 hover:text-white transition">{{ __('messages.about') }}</a>
                 <a href="{{ route('portfolio') }}" class="text-white/80 hover:text-white transition">{{ __('messages.portfolio') }}</a>
                 <a href="{{ route('contact') }}" class="bg-secondary text-white px-6 py-2 rounded-full hover:bg-secondary/90 transition">{{ __('messages.contact') }}</a>
                 
-                <!-- Language Switcher -->
+                <!-- Desktop Language Switcher -->
                 <div class="relative group">
                     <button class="text-white/80 hover:text-white transition flex items-center space-x-1 bg-primary-dark px-3 py-1 rounded-lg">
                         <span>{{ strtoupper(session()->get('locale')) }}</span>
@@ -33,7 +34,6 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
-                    <!-- Language Switcher -->
                     <div class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
                         <a href="{{ route('language.switch', 'en') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition {{ app()->getLocale() == 'en' ? 'bg-gray-100' : '' }}">
                             <span class="flex items-center">
@@ -49,16 +49,69 @@
                         </a>
                     </div>
                 </div>
-                <!-- linked to Digit'All Website on same ip but different port -->
+                
+                <!-- Digit'All Link -->
                 <a href="http://{{ env('DIGITAL_ALL_URL') }}" target="_blank" class="text-white/80 hover:text-white transition">
                     Digit'All
                 </a>
             </div>
-            <button class="md:hidden text-white hover:text-white/80">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="lg:hidden text-white hover:text-white/80 transition">
+                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
             </button>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
+            <div class="absolute top-0 right-0 w-80 h-full bg-primary shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
+                <div class="p-6 bg-primary">
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="text-xl font-bold text-white">Menu</h3>
+                        <button id="close-mobile-menu" class="text-white hover:text-white/80">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Mobile Navigation Links -->
+                    <div class="space-y-4 mb-8">
+                        <a href="{{ route('home') }}" class="block text-white/80 hover:text-white transition py-2 border-b border-white/10">{{ __('messages.home') }}</a>
+                        <a href="{{ route('services') }}" class="block text-white/80 hover:text-white transition py-2 border-b border-white/10">{{ __('messages.services') }}</a>
+                        <a href="{{ route('about') }}" class="block text-white/80 hover:text-white transition py-2 border-b border-white/10">{{ __('messages.about') }}</a>
+                        <a href="{{ route('portfolio') }}" class="block text-white/80 hover:text-white transition py-2 border-b border-white/10">{{ __('messages.portfolio') }}</a>
+                        <a href="{{ route('contact') }}" class="block bg-secondary text-white px-6 py-3 rounded-full hover:bg-secondary/90 transition text-center">{{ __('messages.contact') }}</a>
+                    </div>
+                    
+                    <!-- Mobile Language Switcher -->
+                    <div class="mb-8">
+                        <h4 class="text-white/80 text-sm font-medium mb-3">Language</h4>
+                        <div class="space-y-2">
+                            <a href="{{ route('language.switch', 'en') }}" class="flex items-center text-white/80 hover:text-white transition py-2 {{ app()->getLocale() == 'en' ? 'text-white' : '' }}">
+                                <span class="mr-3">🇬🇧</span>
+                                English
+                            </a>
+                            <a href="{{ route('language.switch', 'fr') }}" class="flex items-center text-white/80 hover:text-white transition py-2 {{ app()->getLocale() == 'fr' ? 'text-white' : '' }}">
+                                <span class="mr-3">🇫🇷</span>
+                                Français
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Digit'All Link -->
+                    <div>
+                        <a href="http://{{ env('DIGITAL_ALL_URL') }}" target="_blank" class="block text-white/80 hover:text-white transition py-2">
+                            Digit'All Website
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -68,7 +121,7 @@
 
     <footer class="bg-tertiary text-white py-16">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Digit'All</h3>
                     <p class="text-white/70">{{ __('messages.footer_description') }}</p>
@@ -121,5 +174,60 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMobileMenu = document.getElementById('close-mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const mobileMenuContent = mobileMenu.querySelector('div');
+
+            function openMobileMenu() {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenuContent.classList.remove('translate-x-full');
+                }, 10);
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMobileMenuFunc() {
+                mobileMenuContent.classList.add('translate-x-full');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+
+            mobileMenuButton.addEventListener('click', openMobileMenu);
+            closeMobileMenu.addEventListener('click', closeMobileMenuFunc);
+            
+            // Close menu when clicking on overlay
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === mobileMenu) {
+                    closeMobileMenuFunc();
+                }
+            });
+
+            // Close menu when pressing Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                    closeMobileMenuFunc();
+                }
+            });
+
+            // Close menu when clicking on navigation links
+            const mobileNavLinks = mobileMenu.querySelectorAll('a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenuFunc);
+            });
+        });
+    </script>
 </body>
-</html> 
+</html>

@@ -2,63 +2,63 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-blue-600 to-indigo-700 py-20">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">About ShabbyTech</h1>
-            <p class="text-xl text-blue-100 max-w-3xl">We're a team of passionate technologists dedicated to helping businesses thrive in the digital age.</p>
+    <section class="bg-gradient-to-br from-blue-600 to-indigo-700 py-12 md:py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">About ShabbyTech</h1>
+            <p class="text-lg md:text-xl text-blue-100 max-w-3xl">We're a team of passionate technologists dedicated to helping businesses thrive in the digital age.</p>
         </div>
     </section>
 
     <!-- Mission Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
-                    <p class="text-lg text-gray-600 mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Our Mission</h2>
+                    <p class="text-base md:text-lg text-gray-600 mb-6">
                         At ShabbyTech, we're committed to empowering businesses with innovative technology solutions that drive growth and success. Our mission is to make cutting-edge technology accessible and beneficial for organizations of all sizes.
                     </p>
-                    <div class="space-y-4">
+                    <div class="space-y-3 md:space-y-4">
                         <div class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-600 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <p class="text-gray-600">Delivering innovative solutions that solve real business challenges</p>
+                            <p class="text-gray-600 text-sm md:text-base">Delivering innovative solutions that solve real business challenges</p>
                         </div>
                         <div class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-600 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <p class="text-gray-600">Making technology accessible and beneficial for all organizations</p>
+                            <p class="text-gray-600 text-sm md:text-base">Making technology accessible and beneficial for all organizations</p>
                         </div>
                         <div class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-600 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <p class="text-gray-600">Fostering a culture of continuous learning and innovation</p>
+                            <p class="text-gray-600 text-sm md:text-base">Fostering a culture of continuous learning and innovation</p>
                         </div>
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team Collaboration" class="rounded-lg shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team Collaboration" class="rounded-lg shadow-xl w-full">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Values Section -->
-    <section class="bg-gray-50 py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Values</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section class="bg-gray-50 py-12 md:py-16">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Our Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Excellence</h3>
-                    <p class="text-gray-600">We strive for excellence in everything we do, delivering high-quality solutions that exceed expectations.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2">Excellence</h3>
+                    <p class="text-gray-600 text-sm md:text-base">We strive for excellence in everything we do, delivering high-quality solutions that exceed expectations.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
@@ -66,8 +66,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Collaboration</h3>
-                    <p class="text-gray-600">We believe in the power of collaboration, working closely with our clients to achieve shared goals.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2">Collaboration</h3>
+                    <p class="text-gray-600 text-sm md:text-base">We believe in the power of collaboration, working closely with our clients to achieve shared goals.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
@@ -75,25 +75,25 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Innovation</h3>
-                    <p class="text-gray-600">We embrace innovation, constantly exploring new technologies and approaches to solve complex problems.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2">Innovation</h3>
+                    <p class="text-gray-600 text-sm md:text-base">We embrace innovation, constantly exploring new technologies and approaches to solve complex problems.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Meet Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 @foreach($teamMembers as $member)
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="{{ asset('storage/' . $member->image) }}" alt="{{ $member->name }}" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ $member->name }}</h3>
-                        <p class="text-blue-600 mb-4">{{ $member->position }}</p>
-                        <p class="text-gray-600 mb-4">{{ $member->bio }}</p>
+                    <img src="{{ asset('storage/' . $member->image) }}" alt="{{ $member->name }}" class="w-full h-48 md:h-64 object-cover">
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">{{ $member->name }}</h3>
+                        <p class="text-blue-600 mb-3 md:mb-4 text-sm md:text-base">{{ $member->position }}</p>
+                        <p class="text-gray-600 mb-4 text-sm md:text-base">{{ $member->bio }}</p>
                         <div class="flex space-x-4">
                             @if($member->email)
                             <a href="mailto:{{ $member->email }}" class="text-gray-600 hover:text-blue-600">
@@ -126,11 +126,11 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="bg-blue-600 py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-white mb-6">Join Our Journey</h2>
-            <p class="text-xl text-blue-100 mb-8">Let's work together to create innovative solutions for your business.</p>
-            <a href="{{ route('contact') }}" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">Get in Touch</a>
+    <section class="bg-blue-600 py-12 md:py-16">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">Join Our Journey</h2>
+            <p class="text-lg md:text-xl text-blue-100 mb-6 md:mb-8">Let's work together to create innovative solutions for your business.</p>
+            <a href="{{ route('contact') }}" class="inline-block bg-white text-blue-600 px-6 md:px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300 text-sm md:text-base">Get in Touch</a>
         </div>
     </section>
 @endsection 

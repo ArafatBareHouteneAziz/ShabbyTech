@@ -5,7 +5,7 @@
     <section class="relative bg-gradient-to-br from-indigo-50 to-blue-50 py-20">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-12 md:mb-0">
+                <div class="md:w-1/2 m-12 md:mb-0">
                     <h1 class="text-4xl md:text-5xl font-bold text-primary text-gray-900 mb-6">
                         Transforming Ideas into <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Digital Reality</span>
                     </h1>

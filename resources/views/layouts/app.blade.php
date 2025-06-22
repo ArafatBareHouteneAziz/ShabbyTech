@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ config('app.name', 'ShabbyTech') }}</title>
+    <title>{{ config('app.name', 'Digit\'All') }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 <body class="bg-gray-50 text-gray-900 font-sans">
     <nav class="fixed top-0 left-0 w-full bg-primary backdrop-blur-md shadow-sm z-50">
         <div class="container mx-auto flex items-center justify-between py-4 px-6">
-            <a href="/" class="text-2xl font-bold text-white">ShabbyTech</a>
+            <a href="/" class="text-2xl font-bold text-white">Digit'All</a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="{{ route('home') }}" class="text-white/80 hover:text-white transition">{{ __('messages.home') }}</a>
                 <a href="{{ route('services') }}" class="text-white/80 hover:text-white transition">{{ __('messages.services') }}</a>
@@ -23,11 +23,11 @@
                 <!-- Language Switcher -->
                 <div class="relative group">
                     <button class="text-white/80 hover:text-white transition flex items-center space-x-1 bg-primary-dark px-3 py-1 rounded-lg">
-                        <span>{{ strtoupper(app()->getLocale()) }}</span>
+                        <span>{{ strtoupper(session()->get('locale')) }}</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
-                    </button>
+                    </button>    
                     <div class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
                         <a href="{{ route('language.switch', 'en') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition {{ app()->getLocale() == 'en' ? 'bg-gray-100' : '' }}">
                             <span class="flex items-center">
@@ -60,7 +60,7 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">ShabbyTech</h3>
+                    <h3 class="text-xl font-bold mb-4">Digit'All</h3>
                     <p class="text-white/70">{{ __('messages.footer_description') }}</p>
                 </div>
                 <div>
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="border-t border-white/10 mt-12 pt-8 text-center text-white/70">
-                <p>&copy; {{ date('Y') }} ShabbyTech. {{ __('messages.all_rights_reserved') }}</p>
+                <p>&copy; {{ date('Y') }} Digit'All. {{ __('messages.all_rights_reserved') }}</p>
             </div>
         </div>
     </footer>

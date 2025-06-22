@@ -15,3 +15,13 @@ Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio
 Route::get('/contact', [InquiryController::class, 'showForm'])->name('contact');
 Route::post('/contact', [InquiryController::class, 'submitForm'])->name('contact.submit');
 Route::get('language/{locale}', [LanguageController::class, 'switchLang'])->name('language.switch');
+
+// Add this route for debugging
+Route::get('/debug/language', function() {
+    app()->setLocale('fr');
+    return [
+        'session_locale' => session()->get('locale'),
+        'app_locale' => app()->getLocale(),
+    ];
+});
+

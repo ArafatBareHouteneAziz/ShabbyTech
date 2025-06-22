@@ -1,4 +1,5 @@
 {
+    "name": "Digit'All",
     "private": true,
     "type": "module",
     "scripts": {

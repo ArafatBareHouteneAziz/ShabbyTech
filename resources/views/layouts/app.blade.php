@@ -12,7 +12,12 @@
 <body class="bg-gray-50 text-gray-900 font-sans">
     <nav class="fixed top-0 left-0 w-full bg-primary backdrop-blur-md shadow-sm z-50">
         <div class="container mx-auto flex items-center justify-between py-4 px-6">
-            <a href="/" class="text-2xl font-bold text-white">Digit'All</a>
+            <!-- le Nom ShabbyTech barre -->
+             
+            <a href="/" class="text-2xl font-bold text-white">
+                <span class="text-white/50 line-through">ShabbyTech</span>
+                <span class="text-white">Digit'All</span>
+            </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="{{ route('home') }}" class="text-white/80 hover:text-white transition">{{ __('messages.home') }}</a>
                 <a href="{{ route('services') }}" class="text-white/80 hover:text-white transition">{{ __('messages.services') }}</a>

@@ -27,7 +27,8 @@
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
-                    </button>    
+                    </button>
+                    <!-- Language Switcher -->
                     <div class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
                         <a href="{{ route('language.switch', 'en') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition {{ app()->getLocale() == 'en' ? 'bg-gray-100' : '' }}">
                             <span class="flex items-center">
@@ -43,6 +44,10 @@
                         </a>
                     </div>
                 </div>
+                <!-- linked to Digit'All Website on same ip but different port -->
+                <a href="{{ env('DIGITAL_ALL_URL') }}" target="_blank" class="text-white/80 hover:text-white transition">
+                    Digit'All
+                </a>
             </div>
             <button class="md:hidden text-white hover:text-white/80">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
